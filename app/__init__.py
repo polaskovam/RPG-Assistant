@@ -18,5 +18,4 @@ cors = CORS(app, supports_credentials=True, resources={r"/foo": {"origins": "htt
 bootstrap = Bootstrap(app)
 # bootstrap.init_app(app)
 
-from app import models, routes, handlers
-from app.auth import routes
+from app import routes
