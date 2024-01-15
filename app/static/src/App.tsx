@@ -4,6 +4,7 @@ import './styles.scss';
 import Header from "./components/Header.tsx";
 import HomePage from "./components/HomePage.tsx";
 import DiceRollPage from "./components/DiceRollPage.tsx";
+import ErrorPage from "./components/ErrorPage.tsx";
 
 function App() {
     return (
@@ -12,7 +13,8 @@ function App() {
             <Routes>
                 <Route path="/" element={<HomePage/>}/>
                 <Route path="/diceroll" element={<DiceRollPage />}/>
-                <Route path="*" element={<HomePage/>}/>
+
+                <Route path="*" element={<ErrorPage/>}/>
             </Routes>
         </Router>
     )
