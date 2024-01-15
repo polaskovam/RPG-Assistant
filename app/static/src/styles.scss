@@ -1,5 +1,62 @@
 body {
   text-align: center;
   overflow-x: hidden;
-  background-color: #f4f6f7;
+  background-color: #f5e9dc;
+  margin: 0;
+}
+
+/* Dice Roll Page */
+
+.dice {
+  display: inline-block;
+  position: relative;
+  width: 96px;
+  height: 96px;
+  text-align: center;
+  vertical-align: top;
+  color: #ffffff;
+  &:hover {
+    opacity: 0.25;
+  }
+}
+
+.d4, .d8, .d10, .d12, .d20, .d48, .d100 {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.d6 {
+  font-size: 5.7rem;
+  &.black {
+    color: #1b1b1b;
+  }
+  &.blue {
+    color: #2086AE;
+  }
+  &.green {
+    color: #1F8327;
+  }
+  &.orange {
+    color: #C9995D;
+  }
+  &.purple {
+    color: #693971;
+  }
+  &.red {
+    color: #AF2413;
+  }
+}
+
+.d4 {
+  padding-top: 44px;
+}
+
+.d8, .d12, .d20, .d48, .d100 {
+  padding: 35px;
+}
+
+.d10 {
+  padding-top: 22px;
+  padding-left: 8px;
 }

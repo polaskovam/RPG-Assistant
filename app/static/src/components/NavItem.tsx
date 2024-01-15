@@ -19,11 +19,11 @@ function NavItem({ activePage, link, name, disabled }: NavItemProps) {
     return (
         <Button onClick={handleButtonClick}
                 sx={{
-                    color: activePage === link ? "white" : "#2B6048",
-                    backgroundColor: activePage === link ? "#83C089" : "white",
+                    color: activePage === link ? "white" : "#151269",
+                    backgroundColor: activePage === link ? "#5b5996" : "white",
                     mr: 2,
                     "&:hover": {
-                        backgroundColor: "#83C089",
+                        backgroundColor: "#5b5996",
                         color: "white"
                     }
                 }}

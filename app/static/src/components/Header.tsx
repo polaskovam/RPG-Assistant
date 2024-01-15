@@ -8,20 +8,20 @@ function Header() {
     const { pathname } = location;
 
     return (
-        <AppBar sx={{ backgroundColor: "white", position: 'relative', py: '4px' }}>
+        <AppBar sx={{ backgroundColor: "#151269", position: 'relative', py: '4px' }}>
             <Box ml={5} mr={3}>
                 <Toolbar sx={{ justifyContent: 'space-between' }}>
                     <Typography variant="h4" sx={{
                         fontFamily: 'Forum,serif',
                         fontSize: '2.5rem',
                         fontWeight: '700',
-                        color: 'black',
+                        color: 'white',
                     }}>
                         Your RPG Assistant
                     </Typography>
                     <Box>
                         <NavItem link="/" name="Home" activePage={pathname}/>
-                        <NavItem link="/diceroll" name="Dice Roll" activePage={pathname} disabled/>
+                        <NavItem link="/diceroll" name="Dice Roll" activePage={pathname} />
                         <NavItem link="/generators" name="Generators" activePage={pathname} disabled/>
                     </Box>
                 </Toolbar>
