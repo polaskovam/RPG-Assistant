@@ -5,11 +5,11 @@ interface DiceProps {
     type: number;
     value: number;
     colour: string;
-    diceNumber: number;
+    id: number;
     removeDice: (e: any) => void;
 }
 
-function Dice({ type, value, colour, diceNumber, removeDice }: DiceProps) {
+function Dice({ type, value, colour, id, removeDice }: DiceProps) {
     const sixSidedDices = [
         "fas fa-dice-one",
         "fas fa-dice-two",
@@ -28,7 +28,7 @@ function Dice({ type, value, colour, diceNumber, removeDice }: DiceProps) {
     return (Number(type) !== 6) ? (
         <Tooltip title={title} placement="top">
             <div
-                id={String(diceNumber)}
+                id={String(id)}
                 className={"dice d" + type}
                 onClick={removeDice}
                 style={{
@@ -43,7 +43,7 @@ function Dice({ type, value, colour, diceNumber, removeDice }: DiceProps) {
     ) : (
         <Tooltip title={title} placement="top">
             <div
-                id={String(diceNumber)}
+                id={String(id)}
                 className={`dice d6 ${colour} ${sixSidedDices[value - 1]}`}
                 style={{
                     cursor: "pointer"

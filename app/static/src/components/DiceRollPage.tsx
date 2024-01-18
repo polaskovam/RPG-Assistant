@@ -151,12 +151,12 @@ function DiceRollPage() {
 
     function handleChange(e: any) {
         const { name, value } = e.target
-        let valueNum = Number(value)
+        let valueNum = Number(value);
         if (!isNaN(valueNum)) {
             if (name === 'add') {
                 setAddValue(valueNum);
             } else if (name === 'subtract') {
-                setSubtractValue(Number(value));
+                setSubtractValue(valueNum);
             }
         }
     }
@@ -191,7 +191,7 @@ function DiceRollPage() {
                                 {previousRolls.map((roll: Record<string, any>, index) => {
                                     return (
                                         <Typography key={index}>
-                                            <Box key={`col1 ${index}`} sx={{ textAlign: "left" }}>
+                                            <Box sx={{ textAlign: "left" }}>
                                                 <b>{index + 1}:</b> {roll.totalValue} {roll.writeDown} {roll.checkStunt && roll.stuntValue > 0 && `(stunt ${roll.stuntValue})`}
                                             </Box>
                                         </Typography>
@@ -222,7 +222,7 @@ function DiceRollPage() {
                                     return (
                                         <Dice
                                             key={index}
-                                            diceNumber={data.id}
+                                            id={data.id}
                                             type={data.type}
                                             colour={data.colour}
                                             value={data.value}
